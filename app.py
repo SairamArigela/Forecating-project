@@ -11,6 +11,7 @@ import streamlit as st
 
 from pickle import dump
 from pickle import load
+import os
 
 st.title('Model Deployment: Forecasting')
 
@@ -24,7 +25,8 @@ st.write(Days)
 
 
 # load the model from disk
-loaded_model = load(open('/blob/main/final_model.sav', 'rb'))
+open_model=open(os.path.join(current_directory,'final_model.sav'), 'rb')
+loaded_model = load(open_model)
 
 prediction = loaded_model.forecast(Days)
 
