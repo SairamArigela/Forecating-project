@@ -40,9 +40,9 @@ prediction = loaded_model.forecast(Days)
 df = pd.DataFrame(prediction,
    columns=('Values'))
 
-#st.table(df)
+st.table(df)
 
 st.subheader('Predicted Values')
-st.write(df)
+#st.write(df)
 
 
