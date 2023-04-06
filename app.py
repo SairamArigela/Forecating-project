@@ -38,7 +38,7 @@ prediction = loaded_model.forecast(Days)
 
 
 df = pd.DataFrame(prediction,
-   columns=('Values')
+   columns=('Values'))
 
 #st.table(df)
 
