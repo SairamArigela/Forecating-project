@@ -22,7 +22,7 @@ st.sidebar.header('User Input Parameters')
     
 Days = st.sidebar.number_input("number of days for forecasting",min_value=1, step=1)
 st.subheader('User Input parameters')
-st.write(Days)
+st.subheader(Days)
 
 
 
@@ -37,12 +37,7 @@ loaded_model = pickle.load(open_model)
 prediction = loaded_model.forecast(Days)
 
 
-df = pd.DataFrame(prediction,
-   columns=('Values'))
-
-st.table(df)
-
 st.subheader('Predicted Values')
-#st.write(df)
+st.write(df)
 
 
