@@ -8,7 +8,7 @@ Created on Wed Apr 05 18:06:17 2023
 
 import pandas as pd
 import streamlit as st 
-from statsmodels.tsa.holtwinters import ExponentialSmoothing 
+
 from pickle import dump
 from pickle import load
 
