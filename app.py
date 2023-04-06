@@ -38,6 +38,6 @@ prediction = loaded_model.forecast(Days)
 
 
 st.subheader('Predicted Values')
-st.write(df)
+st.write(prediction)
 
 
