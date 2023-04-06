@@ -33,7 +33,7 @@ loaded_model = pickle.load(open_model)
 
 prediction = loaded_model.forecast(Days)
 
-df=pd.DataFrame(prediction,columns=('Values'))
+df=pd.DataFrame(prediction,columns=['Values'])
 
 st.subheader('Predicted Values')
 st.write(df)
