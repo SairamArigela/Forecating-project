@@ -8,7 +8,7 @@ Created on Wed Apr 05 18:06:17 2023
 
 import pandas as pd
 import streamlit as st 
-
+import matplotlib.pyplot as plt
 from pickle import dump
 from pickle import load
 import pickle
@@ -26,9 +26,6 @@ st.subheader(Days)
 
 
 
-
-
-
 # load the model from disk
 current_directory = Path(__file__).parent
 open_model=open(os.path.join(current_directory,'final_model.sav'), 'rb')
@@ -36,8 +33,11 @@ loaded_model = pickle.load(open_model)
 
 prediction = loaded_model.forecast(Days)
 
+df=pd.DataFrame(prediction,columns=['Values'])
 
 st.subheader('Predicted Values')
-st.write(prediction)
+st.write(df)
+
+st.line_chart(prediction,width=300,height=400)
 
 
