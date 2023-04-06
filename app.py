@@ -24,7 +24,7 @@ st.write(Days)
 
 
 # load the model from disk
-loaded_model = load(open('Forecating-project/blob/main/final_model.sav', 'rb'))
+loaded_model = load(open('/Forecating-project/blob/main/final_model.sav', 'rb'))
 
 prediction = loaded_model.forecast(Days)
 
