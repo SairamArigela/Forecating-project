@@ -26,6 +26,9 @@ st.write(Days)
 
 
 
+
+
+
 # load the model from disk
 current_directory = Path(__file__).parent
 open_model=open(os.path.join(current_directory,'final_model.sav'), 'rb')
@@ -34,9 +37,12 @@ loaded_model = pickle.load(open_model)
 prediction = loaded_model.forecast(Days)
 
 
+df = pd.DataFrame(prediction,
+   columns=('Values')
 
+#st.table(df)
 
 st.subheader('Predicted Values')
-st.write(prediction)
+st.write(df)
 
 
