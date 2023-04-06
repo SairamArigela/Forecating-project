@@ -8,7 +8,7 @@ Created on Wed Apr 05 18:06:17 2023
 
 import pandas as pd
 import streamlit as st 
-import matplotlib.pyplot as plt
+
 from pickle import dump
 from pickle import load
 import pickle
